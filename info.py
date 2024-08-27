@@ -147,11 +147,11 @@ QUALITIES = ["360P", "", "480P", "", "720P", "", "1080P", "", "1440P", "", "2160
 STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or Flase
 
 # Online Stream and Download
-NO_PORT = bool(environ.get('NO_PORT', False))
+NO_PORT = bool(environ.get('NO_PORT', True))
 APP_NAME = None
 if 'DYNO' in environ:
     ON_HEROKU = True
-    APP_NAME = environ.get('APP_NAME')
+    APP_NAME = environ.get('zeoy')
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
